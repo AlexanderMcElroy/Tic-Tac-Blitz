@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Source+Sans+Pro:ital,wght@0,300;1,200&display=swap" rel="stylesheet"> 
+    <title>Tic Tac Blitz!</title>
+</head>
+<body>
+
+    <div id="gameScreen" class="fullSize flexCenter">
+
+        <div id="titleCard" class="fullSize flexVertical">
+            <div id="titleImageCard" class="flexCenter card"><img src="assets/logo.png" alt="Game Title" id="titleImage"></div>
+            <input type="button" value="PLAY" id="play" class="button">
+        </div>
+
+        <div id="mainContent">
+            <input type="button" value="RESET" id="reset" class="button hidden">
+            <input type="button" value="START" id="start" class="button">
+            
+            <div id="topCenter" class="flexCenter">
+                <div id="messageBox" class="flexCenter">
+                    <div id="timerSetter" class="flexCenter">
+                        <p id="timerText">TURN TIMER</p>
+                        <input type="button" value="3s" id="threeSecondButton" class="timerButton tButtonOn">
+                        <input type="button" value="5s" id="fiveSecondButton" class="timerButton tButtonOff">
+                    </div>
+                    <div id="timerDisplay" class="flexCenter hidden">
+                        <p id="timerDisplayText">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <input type="button" value="VS. PLAYER" id="vsPlayer" class="button">
+            <input type="button" value="VS. AI" id="vsAI" class="button hidden">
+
+            <div id="playerOne" class="card flexVertical playerCard">
+                <div class="fullSize darken hidden" id="playerOneDarken"></div>
+                <div class="nameField flexVertical">
+                    <input type="text" name="Player One Namefield" id="playerOneName">
+                </div>
+                <div class="avatar">
+                    <img src="assets/images/playerOne.png" alt="Player One Avatar" id="playerOneAvatar" class="avatarImage">
+                </div>
+                <div class="scoreField">
+                    <h1 id="playerOneScore">0</h1>
+                </div>
+            </div>
+            
+            <div id="centerCard" class="card">
+                <div id="startTimer" class="fullSize flexCenter hidden">
+                    <p id="startTimerText">0</p>
+                </div>
+
+                <div id="gameBoard" class="fullSize">
+                    <div id="0" class="tile"></div>
+                    <div id="1" class="tile"></div>
+                    <div id="2" class="tile"></div>
+                    <div id="3" class="tile"></div>
+                    <div id="4" class="tile"></div>
+                    <div id="5" class="tile"></div>
+                    <div id="6" class="tile"></div>
+                    <div id="7" class="tile"></div>
+                    <div id="8" class="tile"></div>
+                </div>
+
+                <div id="endCard" class="fullSize flexVertical hidden">
+                    <p>Winner</p>
+                    <p id="winnerName">PLAYER_NAME</p>
+                </div>
+
+                <div id="menuCard" class="fullSize flexVertical hidden">
+                    <div class="menuOption">
+                        <p>Sound</p>
+                        <div id="soundOptions">
+                            <p>On</p>
+                            <input type="radio" name="soundToggle" id="soundOn" value="On">
+                            <p>Off</p>
+                            <input type="radio" name="soundToggle" id="soundOff" value="Off">
+                        </div>
+                    </div>
+
+                    <div class="menuOption">
+                        <p>Music Volume</p>
+                        <input type="range" min="0" max="10" value="1" id="musicVolume">
+                    </div>
+
+                    <div class="menuOption">
+                        <p>AI</p>
+                        <div id="soundOptions">
+                            <p>Easy</p>
+                            <input type="radio" name="aiLevel" id="aiEasy" value="Easy">
+                            <p>Medium</p>
+                            <input type="radio" name="aiLevel" id="aiMedium" value="Medium">
+                        </div>
+                    </div>
+
+                    <div id="menuInfo">
+                        <p>Tic Tac Blitz! v1.0.3</p>
+                        <p class="thinFam">
+                            Designed by Ahmet Fırat Usta. Game rules and asset attributions can be found on the GitHub repo.
+                        </p>
+                        <i class="thinFam">
+                            Copyright 2021.
+                        </i>
+                        <a href="https://github.com/KazaKazan/tic-tac-toe" id="gitLink"><img src="assets/icons/github.png" alt="Github" id="gitImage"></a>
+                    </div>             
+                </div>
+            </div>
+            
+            <div id="playerTwo" class="card flexVertical playerCard">
+                <div class="fullSize darken hidden" id="playerTwoDarken"></div>
+                <div class="nameField flexVertical">
+                    <input type="text" name="Player Two Namefield" id="playerTwoName" class="">
+                </div>
+                <div class="avatar">
+                    <img src="assets/images/playerTwo.png" alt="Player Two Avatar" id="playerTwoAvatar" class="avatarImage">
+                </div>
+                <div class="scoreField">
+                    <h1 id="playerTwoScore">0</h1>
+                </div>
+            </div>
+        </div>
+        <img src="assets/icons/settings.png" alt="menu" id="menuButton">
+    </div>
+</body>
+</html>
