@@ -10,7 +10,7 @@ A tic-tac-toe variant
 
 # Info
 
-Tic-Tac Blitz! is a singleplayer / local multiplayer browser game made by Alexander McElroy Jr (me) in my free time. The game is a fast paced strategic variant of tic-tac-toe.
+Tic-Tac Blitz! is a singleplayer / local multiplayer browser game made in my free time. The game is a fast paced strategic variant of tic-tac-toe.
 
 Live demo: https://alexandermcelroy.github.io/Tic-Tac-Blitz/
 
